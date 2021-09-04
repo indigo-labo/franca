@@ -4,7 +4,7 @@ namespace IndigoLabo\Franca;
 
 use Illuminate\Support\ServiceProvider;
 
-class FrancaServiceProvider extends ServiceProvider
+class AppliServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -32,9 +32,5 @@ class FrancaServiceProvider extends ServiceProvider
         ]);
         $this->mergeConfigFrom(__DIR__.'/../config/basic_auth.php', 'basic_auth');
         $this->mergeConfigFrom(__DIR__.'/../config/secure_protocol.php', 'secure_protocol');
-
-        $this->loadRoutesFrom(__DIR__.'/../routes/franca.php');
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'franca');
     }
 }

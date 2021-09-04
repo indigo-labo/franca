@@ -1,12 +1,6 @@
 <?php
 use Illuminate\Support\Carbon;
 
-if (!function_exists('debug')) {
-    function debug($out, $context = []) {
-        \Log::debug($out, $context);
-    }
-}
-
 if (!function_exists('toObject')) {
     /**
      * 配列 -> Objectに。
