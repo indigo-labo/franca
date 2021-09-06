@@ -1,5 +1,7 @@
 <?php
+
 use Illuminate\Support\Carbon;
+use IndigoLabo\Franca\Services\CalendarService;
 
 if (!function_exists('toObject')) {
     /**
@@ -47,5 +49,11 @@ if (!function_exists('carbon')) {
         } catch (Exception $e) {
             return now();
         }
+    }
+}
+
+if (!function_exists('isHoliday')) {
+    function isHoliday($dateStr) {
+        return CalendarService::isHoliday($dateStr);
     }
 }
